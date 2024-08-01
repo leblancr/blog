@@ -1,2 +1,49 @@
-<h1>Hello, Rails!</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles</title>
+  <style>
+      body {
+          background-color: #333; /* Dark background */
+          color: rebeccapurple;
+          font-family: Arial, sans-serif;
+      }
+      ul {
+          color: gray;
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+      }
+      li {
+          padding: 10px;
+          border-bottom: 1px solid #555; /* Slightly lighter border for separation */
+      }
+      .article-title {
+          color: greenyellow;
+          font-weight: bold; /* Optional: Makes the title bold */
+      }
+
+      .article-body {
+          color: springgreen;
+          margin-top: 5px; /* Optional: Adds space between the title and body */
+      }
+  </style>
+</head>
+<body>
+<h1>Articles</h1>
+<ul>
+  <%= @articles.each do |article| %>
+    <li>
+      <div class="article-title">
+        <%= article.title %>
+      </div>
+      <div class="article-body">
+        <%= article.body %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+</body>
+</html>
