@@ -4,46 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Articles</title>
-  <style>
-      body {
-          background-color: #333; /* Dark background */
-          color: rebeccapurple;
-          font-family: Arial, sans-serif;
-      }
-      ul {
-          color: gray;
-          padding: 0;
-          margin: 0;
-          list-style-type: none;
-      }
-      li {
-          padding: 10px;
-          border-bottom: 1px solid #555; /* Slightly lighter border for separation */
-      }
-      .article-title {
-          color: greenyellow;
-          font-weight: bold; /* Optional: Makes the title bold */
-      }
-
-      .article-body {
-          color: springgreen;
-          margin-top: 5px; /* Optional: Adds space between the title and body */
-      }
-  </style>
 </head>
 <body>
 <h1>Articles</h1>
 <ul>
+  <!-- article is the variable name in each loop that's why no '@' in front' -->
   <%= @articles.each do |article| %>
     <li>
       <div class="article-title">
-        <%= article.title %>
-      </div>
-      <div class="article-body">
-        <%= article.body %>
+        <%= link_to article.title, article %>
       </div>
     </li>
   <% end %>
 </ul>
+<%= link_to "New Article", new_article_path %>
 </body>
 </html>

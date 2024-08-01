@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: #333; /* Dark background */
+    color: deepskyblue; /* body text */
+    font-family: Arial, sans-serif;
+}
+ul {
+    color: gray;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+li {
+    padding: 10px;
+    border-bottom: 1px solid #555; /* Slightly lighter border for separation */
+}
+.article-title {
+    color: deepskyblue;
+    font-weight: bold; /* Optional: Makes the title bold */
+}
+
+.article-body {
+    color: springgreen;
+    margin-top: 5px; /* Optional: Adds space between the title and body */
+}
+
+a {
+    color: blue; /* Color for unvisited links */
+    text-decoration: none; /* Optional: Removes the underline */
+}
+
+/* Color for visited links */
+a:visited {
+    color: purple; /* Color for visited links */
+}
