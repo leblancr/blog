@@ -21,6 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Tutorial URL:
+https://guides.rubyonrails.org/v5.0/getting_started.html 
 
 
